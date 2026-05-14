@@ -64,14 +64,15 @@ class Service:
         self.app = app
         root_dir = lollms_paths.personal_path
 
-        ASCIIColors.red("  _           _      _      __  __  _____ _______ _____ _____ ")
-        ASCIIColors.red(" | |         | |    | |    |  \/  |/ ____|__   __/ ____|_   _|")
-        ASCIIColors.red(" | |     ___ | |    | |    | \  / | (___    | | | |  __  | |  ")
-        ASCIIColors.red(" | |    / _ \| |    | |    | |\/| |\___ \   | | | | |_ | | |  ")
-        ASCIIColors.red(" | |___| (_) | |____| |____| |  | |____) |  | | | |__| |_| |_ ")
-        ASCIIColors.red(" |______\___/|______|______|_|  |_|_____/   |_|  \_____|_____|")
-        ASCIIColors.red("                                      ______                  ")
-        ASCIIColors.red("                                     |______|                 ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"   _           _      _      __  __  _____ _______ _____ _____ ")
+        ASCIIColors.red(r"  | |         | |    | |    |  \/  |/ ____|__   __/ ____|_   _|")
+        ASCIIColors.red(r"  | |     ___ | |    | |    | \  / | (___    | | | |  __  | |  ")
+        ASCIIColors.red(r"  | |    / _ \| |    | |    | |\/| |\___ \   | | | | |_ | | |  ")
+        ASCIIColors.red(r"  | |___| (_) | |____| |____| |  | |____) |  | | | |__| |_| |_ ")
+        ASCIIColors.red(r"  |______\___/|______|______|_|  |_|_____/   |_|  \_____|_____|")
+        ASCIIColors.red(r"                                       ______                  ")
+        ASCIIColors.red(r"                                      |______|                 ")
       
         ASCIIColors.red(" Launching tgi service by Hugging face")
         ASCIIColors.red(" Integration in lollms by ParisNeo")

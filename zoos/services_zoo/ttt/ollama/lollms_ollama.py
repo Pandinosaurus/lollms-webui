@@ -94,11 +94,12 @@ class Service:
         self.app = app
         root_dir = lollms_paths.personal_path
       
-        ASCIIColors.red(" __    _____ __    __    _____ _____       _____ __    __    _____ _____ _____ ")
-        ASCIIColors.red("|  |  |     |  |  |  |  |     |   __|     |     |  |  |  |  |  _  |     |  _  |")
-        ASCIIColors.red("|  |__|  |  |  |__|  |__| | | |__   |     |  |  |  |__|  |__|     | | | |     |")
-        ASCIIColors.red("|_____|_____|_____|_____|_|_|_|_____|_____|_____|_____|_____|__|__|_|_|_|__|__|")
-        ASCIIColors.red("                                    |_____|                                    ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"   __    _____ __    __    _____ _____       _____ __    __    _____ _____ _____  ")
+        ASCIIColors.red(r"  |  |  |     |  |  |  |  |     |   __|     |     |  |  |  |  |  _  |     |  _  | ")
+        ASCIIColors.red(r"  |  |__|  |  |  |__|  |__| | | |__   |     |  |  |  |__|  |__|     | | | |     | ")
+        ASCIIColors.red(r"  |_____|_____|_____|_____|_|_|_|_____|_____|_____|_____|_____|__|__|_|_|_|__|__| ")
+        ASCIIColors.red(r"                                      |_____|                                     ")
 
         ASCIIColors.red(" Launching ollama service by Jeffrey Morgan (jmorganca)")
         ASCIIColors.red(" Integration in lollms by ParisNeo")

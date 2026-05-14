@@ -148,14 +148,15 @@ class LollmsComfyUI(LollmsTTI):
         self.output_dir = root_dir / "outputs/comfyui"
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
-        ASCIIColors.red(" _      ____  _      _      __  __  _____  _____                 __             _ ")
-        ASCIIColors.red("| |    / __ \| |    | |    |  \/  |/ ____|/ ____|               / _|           (_)")
-        ASCIIColors.red("| |   | |  | | |    | |    | \  / | (___ | |     ___  _ __ ___ | |_ _   _ _   _ _ ")
-        ASCIIColors.red("| |   | |  | | |    | |    | |\/| |\___ \| |    / _ \| '_ ` _ \|  _| | | | | | | |")
-        ASCIIColors.red("| |___| |__| | |____| |____| |  | |____) | |___| (_) | | | | | | | | |_| | |_| | |")
-        ASCIIColors.red("|______\____/|______|______|_|  |_|_____/ \_____\___/|_| |_| |_|_|  \__, |\__,_|_|")
-        ASCIIColors.red("                                     ______                         __/ |         ")
-        ASCIIColors.red("                                    |______|                       |___/          ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"   _      ____  _      _      __  __  _____  _____                 __             _  ")
+        ASCIIColors.red(r"  | |    / __ \| |    | |    |  \/  |/ ____|/ ____|               / _|           (_) ")
+        ASCIIColors.red(r"  | |   | |  | | |    | |    | \  / | (___ | |     ___  _ __ ___ | |_ _   _ _   _ _  ")
+        ASCIIColors.red(r"  | |   | |  | | |    | |    | |\/| |\___ \| |    / _ \| '_ ` _ \|  _| | | | | | | | ")
+        ASCIIColors.red(r"  | |___| |__| | |____| |____| |  | |____) | |___| (_) | | | | | | | | |_| | |_| | | ")
+        ASCIIColors.red(r"  |______\____/|______|______|_|  |_|_____/ \_____\___/|_| |_| |_|_|  \__, |\__,_|_| ")
+        ASCIIColors.red(r"                                       ______                         __/ |          ")
+        ASCIIColors.red(r"                                      |______|                       |___/           ")
 
         ASCIIColors.red(" Forked from comfyanonymous's Comfyui nodes system")
         ASCIIColors.red(" Integration in lollms by ParisNeo")
