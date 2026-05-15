@@ -40,13 +40,13 @@ else:
     )
 
 
-ASCIIColors.red("                                     ")
-ASCIIColors.red(" __    _____ __    __    _____ _____ ")
-ASCIIColors.red("|  |  |     |  |  |  |  |     |   __|")
-ASCIIColors.red("|  |__|  |  |  |__|  |__| | | |__   |")
-ASCIIColors.red("|_____|_____|_____|_____|_|_|_|_____|")
-ASCIIColors.red(" Configurator                        ")
-ASCIIColors.red(" LoLLMS configuratoin tool")
+ASCIIColors.red(r"")
+ASCIIColors.red(r"   __    _____ __    __    _____ _____  ")
+ASCIIColors.red(r"  |  |  |     |  |  |  |  |     |   __| ")
+ASCIIColors.red(r"  |  |__|  |  |  |__|  |__| | | |__   | ")
+ASCIIColors.red(r"  |_____|_____|_____|_____|_|_|_|_____| ")
+ASCIIColors.red(" Configurator")
+ASCIIColors.red(" LoLLMS configuration tool")
 ASCIIColors.yellow(f"Root dir : {root_path}")
 
 sio = socketio.AsyncServer(async_mode="asgi")

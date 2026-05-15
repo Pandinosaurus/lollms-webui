@@ -367,12 +367,13 @@ class LollmsSD(LollmsTTI):
         self.output_folder.mkdir(parents=True, exist_ok=True)
 
        
-        ASCIIColors.red("                                                       ")
-        ASCIIColors.red(" __    _____ __    __    _____ _____       _____ ____  ")
-        ASCIIColors.red("|  |  |     |  |  |  |  |     |   __|     |   __|    \ ")
-        ASCIIColors.red("|  |__|  |  |  |__|  |__| | | |__   |     |__   |  |  |")
-        ASCIIColors.red("|_____|_____|_____|_____|_|_|_|_____|_____|_____|____/ ")
-        ASCIIColors.red("                                    |_____|            ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"                                                          ")
+        ASCIIColors.red(r"   __    _____ __    __    _____ _____       _____ ____   ")
+        ASCIIColors.red(r"  |  |  |     |  |  |  |  |     |   __|     |   __|    \  ")
+        ASCIIColors.red(r"  |  |__|  |  |  |__|  |__| | | |__   |     |__   |  |  | ")
+        ASCIIColors.red(r"  |_____|_____|_____|_____|_|_|_|_____|_____|_____|____/  ")
+        ASCIIColors.red(r"                                      |_____|             ")
 
         ASCIIColors.red(" Forked from Auto1111's Stable diffusion api")
         ASCIIColors.red(" Integration in lollms by ParisNeo using mix1009's sdwebuiapi ")

@@ -132,14 +132,15 @@ class LollmsASR:
         self.auto_asr_url = self.asr_base_url+"/asr"
         shared_folder = root_dir/"shared"
         self.asr_path = shared_folder / "asr"
-        ASCIIColors.red(" _           _      _     ___  ___       ___   ___________ ")
-        ASCIIColors.red("| |         | |    | |    |  \/  |      / _ \ /  ___| ___ \ ")
-        ASCIIColors.red("| |     ___ | |    | |    | .  . |___  / /_\ \\ `--.| |_/ /")
-        ASCIIColors.red("| |    / _ \| |    | |    | |\/| / __| |  _  | `--. \    / ")
-        ASCIIColors.red("| |___| (_) | |____| |____| |  | \__ \ | | | |/\__/ / |\ \ ")
-        ASCIIColors.red("\_____/\___/\_____/\_____/\_|  |_/___/ \_| |_/\____/\_| \_|")
-        ASCIIColors.red("                                   ______                  ")
-        ASCIIColors.red("                                  |______|                 ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"   _           _      _     ___  ___       ___   ___________  ")
+        ASCIIColors.red(r"  | |         | |    | |    |  \/  |      / _ \ /  ___| ___ \ ")
+        ASCIIColors.red(r"  | |     ___ | |    | |    | .  . |___  / /_\ \\ `--.| |_/ / ")
+        ASCIIColors.red(r"  | |    / _ \| |    | |    | |\/| / __| |  _  | `--. \    /  ")
+        ASCIIColors.red(r"  | |___| (_) | |____| |____| |  | \__ \ | | | |/\__/ / |\ \  ")
+        ASCIIColors.red(r"  \_____/\___/\_____/\_____/\_|  |_/___/ \_| |_/\____/\_| \_| ")
+        ASCIIColors.red(r"                                     ______                   ")
+        ASCIIColors.red(r"                                    |______|                  ")
                                                          
         ASCIIColors.red(" Forked from ahmetoner's asr server")
         ASCIIColors.red(" Integration in lollms by ParisNeo using  ahmetoner's webapi")

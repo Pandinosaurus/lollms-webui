@@ -137,16 +137,16 @@ class LollmsDiffusers(LollmsTTI):
         self.settings_updated()
 
     def settings_updated(self):
-        ASCIIColors.red("")       
-        ASCIIColors.red("   _           _ _                    _ _  __  __                          ")
-        ASCIIColors.red("  | |         | | |                  | (_)/ _|/ _|                         ")
-        ASCIIColors.red("  | |     ___ | | |_ __ ___  ___   __| |_| |_| |_ _   _ ___  ___ _ __ ___  ")
-        ASCIIColors.red("  | |    / _ \| | | '_ ` _ \/ __| / _` | |  _|  _| | | / __|/ _ \ '__/ __| ")
-        ASCIIColors.red("  | |___| (_) | | | | | | | \__ \| (_| | | | | | | |_| \__ \  __/ |  \__ \ ")
-        ASCIIColors.red("  |______\___/|_|_|_| |_| |_|___/ \__,_|_|_| |_|  \__,_|___/\___|_|  |___/ ")
-        ASCIIColors.red("                              ______                                       ")
-        ASCIIColors.red("                             |______|                                      ")
-        ASCIIColors.red("")       
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"   _           _ _                    _ _  __  __                          ")
+        ASCIIColors.red(r"  | |         | | |                  | (_)/ _|/ _|                         ")
+        ASCIIColors.red(r"  | |     ___ | | |_ __ ___  ___   __| |_| |_| |_ _   _ ___  ___ _ __ ___  ")
+        ASCIIColors.red(r"  | |    / _ \| | | '_ ` _ \/ __| / _` | |  _|  _| | | / __|/ _ \ '__/ __| ")
+        ASCIIColors.red(r"  | |___| (_) | | | | | | | \__ \| (_| | | | | | | |_| \__ \  __/ |  \__ \ ")
+        ASCIIColors.red(r"  |______\___/|_|_|_| |_| |_|___/ \__,_|_|_| |_|  \__,_|___/\___|_|  |___/ ")
+        ASCIIColors.red(r"                              ______                                       ")
+        ASCIIColors.red(r"                             |______|                                      ")
+        ASCIIColors.red(r"")
         ASCIIColors.yellow(f"Using model: {self.service_config.model}")
         import torch 
 
