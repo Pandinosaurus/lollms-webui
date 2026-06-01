@@ -65,6 +65,10 @@ Happy April Fool's Day! While we did genuinely rework the settings page structur
 # LoLLMs v19.0 (alpha) Changelog
 *Date: March 06, 2025*
 
+## [2026-06-01 23:11]
+
+- fix(lollms_apps): prevent path traversal vulnerabilities in app upload
+
 ## [2026-04-26 01:15]
 
 - feat: remove auto-update pull logic for bindings and models zoos

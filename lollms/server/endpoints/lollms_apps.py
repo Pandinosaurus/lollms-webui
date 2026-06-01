@@ -320,9 +320,23 @@ async def upload_app(client_id: str, file: UploadFile = File(...)):
         with open(temp_file, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
-        # Extract the zip file
+        # Extract the zip file safely
         with zipfile.ZipFile(temp_file, "r") as zip_ref:
-            zip_ref.extractall(temp_dir)
+            for member in zip_ref.namelist():
+                # Validate path to prevent ZipSlip
+                member_path = Path(temp_dir) / member
+                resolved_path = member_path.resolve()
+                temp_resolved = Path(temp_dir).resolve()
+
+                # Ensure the resolved path is within the temp directory
+                try:
+                    resolved_path.relative_to(temp_resolved)
+                except ValueError:
+                    raise HTTPException(
+                        status_code=400, detail=f"Zip entry contains unsafe path: {member}"
+                    )
+
+                zip_ref.extract(member, temp_dir)
 
         # Check for required files
         required_files = ["index.html", "description.yaml", "icon.png"]
@@ -343,8 +357,18 @@ async def upload_app(client_id: str, file: UploadFile = File(...)):
                 status_code=400, detail="App name not found in description.yaml"
             )
 
+        # Sanitize app_name to prevent directory traversal
+        app_name = sanitize_path(app_name)
+        if ".." in app_name or "/" in app_name or "\\" in app_name:
+            raise HTTPException(
+                status_code=400, detail="Invalid app name: path traversal detected"
+            )
+
         # Create the app directory
         app_dir = lollmsElfServer.lollms_paths.apps_zoo_path / app_name
+        # Verify app_dir is within the intended parent directory
+        if not str(app_dir.resolve()).startswith(str(lollmsElfServer.lollms_paths.apps_zoo_path.resolve())):
+            raise HTTPException(status_code=400, detail="Invalid app name: path traversal detected")
         if os.path.exists(app_dir):
             raise HTTPException(
                 status_code=400, detail="An app with this name already exists"
