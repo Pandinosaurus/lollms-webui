@@ -111,14 +111,14 @@ class LollmsFooocus(LollmsTTI):
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.models_dir.mkdir(parents=True, exist_ok=True)
 
-        ASCIIColors.red(" _           _ _                ______                               ")
-        ASCIIColors.red("| |         | | |               |  ___|                              ")
-        ASCIIColors.red("| |     ___ | | |_ __ ___  ___  | |_ ___   ___   ___   ___ _   _ ___ ")
-        ASCIIColors.red("| |    / _ \| | | '_ ` _ \/ __| |  _/ _ \ / _ \ / _ \ / __| | | / __|")
-        ASCIIColors.red("| |___| (_) | | | | | | | \__ \ | || (_) | (_) | (_) | (__| |_| \__ \ ")
-        ASCIIColors.red("\_____/\___/|_|_|_| |_| |_|___/ \_| \___/ \___/ \___/ \___|\__,_|___/")
-        ASCIIColors.red("                            ______                                   ")
-        ASCIIColors.red("                           |______|                                  ")
+        ASCIIColors.red(r" _           _ _                ______                                ")
+        ASCIIColors.red(r"| |         | | |               |  ___|                               ")
+        ASCIIColors.red(r"| |     ___ | | |_ __ ___  ___  | |_ ___   ___   ___   ___ _   _ ___  ")
+        ASCIIColors.red(r"| |    / _ \| | | '_ ` _ \/ __| |  _/ _ \ / _ \ / _ \ / __| | | / __| ")
+        ASCIIColors.red(r"| |___| (_) | | | | | | | \__ \ | || (_) | (_) | (_) | (__| |_| \__ \ ")
+        ASCIIColors.red(r"\_____/\___/|_|_|_| |_| |_|___/ \_| \___/ \___/ \___/ \___|\__,_|___/ ")
+        ASCIIColors.red(r"                            ______                                    ")
+        ASCIIColors.red(r"                           |______|                                   ")
         if not PackageManager.check_package_installed("gradio_client"):
             PackageManager.install_or_update("gradio_client")
         from gradio_client import Client

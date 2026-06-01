@@ -1,10 +1,13 @@
+import ipaddress
 import os
 import platform
 import shutil
+import socket
 import subprocess
 import sys
 import uuid
 from pathlib import Path
+from urllib.parse import urlparse
 
 import pipmaster as pm
 import requests
@@ -459,15 +462,47 @@ async def uninstall_app(app_name: str, auth: AuthRequest):
 
 REPO_URL = "https://github.com/ParisNeo/lollms_apps_zoo.git"
 
+_BLOCKED_NETWORKS = [
+    ipaddress.ip_network("127.0.0.0/8"),
+    ipaddress.ip_network("10.0.0.0/8"),
+    ipaddress.ip_network("172.16.0.0/12"),
+    ipaddress.ip_network("192.168.0.0/16"),
+    ipaddress.ip_network("169.254.0.0/16"),
+    ipaddress.ip_network("::1/128"),
+    ipaddress.ip_network("fc00::/7"),
+    ipaddress.ip_network("fe80::/10"),
+]
+
+
+def _is_safe_url(url: str) -> bool:
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme not in {"http", "https"}:
+            return False
+        host = parsed.hostname
+        if not host:
+            return False
+        addr = ipaddress.ip_address(socket.gethostbyname(host))
+        return not any(addr in net for net in _BLOCKED_NETWORKS)
+    except Exception:
+        return False
+
 
 class ProxyRequest(BaseModel):
+    client_id: str
     url: str
 
 
 @router.post("/api/proxy")
 async def proxy(request: ProxyRequest):
+    check_access(lollmsElfServer, request.client_id)
+    if not _is_safe_url(request.url):
+        raise HTTPException(
+            status_code=400,
+            detail="URL not allowed: must be http/https and not point to private/internal addresses",
+        )
     try:
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(follow_redirects=False) as client:
             response = await client.get(request.url)
             return {"content": response.text}
     except Exception as e:

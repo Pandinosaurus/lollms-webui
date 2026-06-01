@@ -33,12 +33,13 @@ class XTTS(LollmsTTS):
         self.ready = False
 
         # Show a cool LOGO using ASCIIColors
-        ASCIIColors.red("   __    ___  __    __          __     __  ___   _        ")
-        ASCIIColors.red("  / /   /___\/ /   / /   /\/\  / _\    \ \/ / |_| |_ ___  ")
-        ASCIIColors.red(" / /   //  // /   / /   /    \ \ \ _____\  /| __| __/ __| ")
-        ASCIIColors.red("/ /___/ \_// /___/ /___/ /\/\ \_\ \_____/  \| |_| |_\__ \ ")
-        ASCIIColors.red("\____/\___/\____/\____/\/    \/\__/    /_/\_\\__|\__|___/ ")
-        ASCIIColors.red("Using coqui-ai's XTTS backend")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"     __    ___  __    __          __     __  ___   _        ")
+        ASCIIColors.red(r"    / /   /___\/ /   / /   /\/\  / _\    \ \/ / |_| |_ ___  ")
+        ASCIIColors.red(r"   / /   //  // /   / /   /    \ \ \ _____\  /| __| __/ __| ")
+        ASCIIColors.red(r"  / /___/ \_// /___/ /___/ /\/\ \_\ \_____/  \| |_| |_\__ \ ")
+        ASCIIColors.red(r"  \____/\___/\____/\____/\/    \/\__/    /_/\_\\__|\__|___/ ")
+        ASCIIColors.red(r"Using coqui-ai's XTTS backend")
         # Load the TTS model
         self.tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
         self.tts.to("cuda")

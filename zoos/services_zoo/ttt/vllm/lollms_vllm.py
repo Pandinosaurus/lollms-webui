@@ -95,12 +95,13 @@ class Service:
         self.app = app
         root_dir = lollms_paths.personal_path
         
-        ASCIIColors.red("   __         __    __          __          __    __         ")
-        ASCIIColors.red("  / /  ___   / /   / /   /\/\  / _\ __   __/ /   / /   /\/\  ")
-        ASCIIColors.red(" / /  / _ \ / /   / /   /    \ \ \  \ \ / / /   / /   /    \ ")
-        ASCIIColors.red("/ /__| (_) / /___/ /___/ /\/\ \_\ \  \ V / /___/ /___/ /\/\ \ ")
-        ASCIIColors.red("\____/\___/\____/\____/\/    \/\__/___\_/\____/\____/\/    \/")
-        ASCIIColors.red("                                 |_____|                     ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"     __         __    __          __          __    __          ")
+        ASCIIColors.red(r"    / /  ___   / /   / /   /\/\  / _\ __   __/ /   / /   /\/\   ")
+        ASCIIColors.red(r"   / /  / _ \ / /   / /   /    \ \ \  \ \ / / /   / /   /    \  ")
+        ASCIIColors.red(r"  / /__| (_) / /___/ /___/ /\/\ \_\ \  \ V / /___/ /___/ /\/\ \ ")
+        ASCIIColors.red(r"  \____/\___/\____/\____/\/    \/\__/___\_/\____/\____/\/    \/ ")
+        ASCIIColors.red(r"                                   |_____|                      ")
 
         ASCIIColors.red(" Launching vllm service by vllm team")
         ASCIIColors.red(" Integration in lollms by ParisNeo")

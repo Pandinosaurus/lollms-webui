@@ -119,14 +119,14 @@ class LollmsDiffusersClient(LollmsTTI):
         self.models_dir.mkdir(parents=True, exist_ok=True)
 
        
-        ASCIIColors.green("   _           _ _                    _ _  __  __                          ")
-        ASCIIColors.green("  | |         | | |                  | (_)/ _|/ _|                         ")
-        ASCIIColors.green("  | |     ___ | | |_ __ ___  ___   __| |_| |_| |_ _   _ ___  ___ _ __ ___  ")
-        ASCIIColors.green("  | |    / _ \| | | '_ ` _ \/ __| / _` | |  _|  _| | | / __|/ _ \ '__/ __| ")
-        ASCIIColors.green("  | |___| (_) | | | | | | | \__ \| (_| | | | | | | |_| \__ \  __/ |  \__ \ ")
-        ASCIIColors.green("  |______\___/|_|_|_| |_| |_|___/ \__,_|_|_| |_|  \__,_|___/\___|_|  |___/ ")
-        ASCIIColors.green("                              ______                                       ")
-        ASCIIColors.green("                             |______|                                      ")
+        ASCIIColors.green(r"   _           _ _                    _ _  __  __                          ")
+        ASCIIColors.green(r"  | |         | | |                  | (_)/ _|/ _|                         ")
+        ASCIIColors.green(r"  | |     ___ | | |_ __ ___  ___   __| |_| |_| |_ _   _ ___  ___ _ __ ___  ")
+        ASCIIColors.green(r"  | |    / _ \| | | '_ ` _ \/ __| / _` | |  _|  _| | | / __|/ _ \ '__/ __| ")
+        ASCIIColors.green(r"  | |___| (_) | | | | | | | \__ \| (_| | | | | | | |_| \__ \  __/ |  \__ \ ")
+        ASCIIColors.green(r"  |______\___/|_|_|_| |_| |_|___/ \__,_|_|_| |_|  \__,_|___/\___|_|  |___/ ")
+        ASCIIColors.green(r"                              ______                                       ")
+        ASCIIColors.green(r"                             |______|                                      ")
 
     def settings_updated(self):
         pass

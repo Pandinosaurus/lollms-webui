@@ -109,12 +109,12 @@ class LollmsXTTS(LollmsTTS):
         self.stop_event = threading.Event()
 
         # Show a cool LOGO using ASCIIColors
-        ASCIIColors.red("")
-        ASCIIColors.red("   __    ___  __    __          __     __  ___   _        ")
-        ASCIIColors.red("  / /   /___\/ /   / /   /\/\  / _\    \ \/ / |_| |_ ___  ")
-        ASCIIColors.red(" / /   //  // /   / /   /    \ \ \ _____\  /| __| __/ __| ")
-        ASCIIColors.red("/ /___/ \_// /___/ /___/ /\/\ \_\ \_____/  \| |_| |_\__ \ ")
-        ASCIIColors.red("\____/\___/\____/\____/\/    \/\__/    /_/\_\\__|\__|___/ ")
+        ASCIIColors.red(r"")
+        ASCIIColors.red(r"     __    ___  __    __          __     __  ___   _        ")
+        ASCIIColors.red(r"    / /   /___\/ /   / /   /\/\  / _\    \ \/ / |_| |_ ___  ")
+        ASCIIColors.red(r"   / /   //  // /   / /   /    \ \ \ _____\  /| __| __/ __| ")
+        ASCIIColors.red(r"  / /___/ \_// /___/ /___/ /\/\ \_\ \_____/  \| |_| |_\__ \ ")
+        ASCIIColors.red(r"  \____/\___/\____/\____/\/    \/\__/    /_/\_\\__|\__|___/ ")
 
         # Load the TTS model
         self.tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
